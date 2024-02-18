@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;    
+}
+
+body {
+    max-width: 1280px;
+    margin: 0 auto;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+}
+
+/*HEADER*/
+.container-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    position: fixed;
+    z-index: 1000;
+    max-width: 1280px;
+    margin: 0 auto;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.menu {
+    margin-right: auto;   
+}
+
+.navbar, .menu, .iconos {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.navbar {
+    justify-content: center;
+    color: grey;
+    font-size: 16px;
+}
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.navbar ul li {
+    display: inline-block;
+    margin: 0 1rem;
+}
+
+.iconos {
+    justify-content: space-between;
+    flex-grow: .2;
+}
+
+/*CUERPO*/
+hr {
+    margin-top: 6rem;
+}
+
+.title {
+    padding: 2rem;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.container-prendas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1000px;
+    margin: 0 auto;
+    gap: 1rem;  
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.item img {
+    max-width: 100%;
+    border-radius: 1rem;
+}
+
+.item .info-producto {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    width: 90%;
+    max-width: 100%;
+    font-size: 14px;
+}
+
+.precios {
+    font-weight: bold;
+}
+
+/*FOOTER*/
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    margin: 2rem;
+    background-color: #212429;
+    color: #ffffff;
+    font-size: 16px;
+}
+.footer-item {
+    display: flex;
+    align-items: center;
+}
+.icono {
+    height: 3rem;
+    width: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+    border-radius: 50%;
+    background-color: #ffffff;
+}
+
+/* PANTALLAS MÁX 920PX */
+
+@media (max-width: 920px) {
+
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        text-decoration: none;    
+    }
+    
+    body {
+        margin: 0 auto;
+        font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+    }
+    /*HEADER*/
+    .container-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        margin: 0 auto;
+        width: 100%;
+        text-align: center;
+        position: static;
+    }
+    
+    .menu {
+        display: block;
+        margin: 0 auto;
+    }
+        
+    .navbar, .iconos {
+        display: none;
+    }
+
+    /*CUERPO*/
+    hr {
+        margin: 0;
+    }
+    .container-prendas {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .item .info-producto {
+        width: 50%;
+    }
+
+    /*FOOTER*/
+    footer {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .footer-item {
+       border-bottom: 1px solid white;
+       margin-bottom: 2rem;
+       padding-bottom: 1rem;
+    }
+}
