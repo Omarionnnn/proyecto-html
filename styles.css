@@ -15,18 +15,21 @@ body {
 }
 
 /*HEADER*/
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: #ffffff;
+    z-index: 1000;
+}
 .container-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 2rem;
-    position: fixed;
-    z-index: 1000;
     max-width: 1280px;
     margin: 0 auto;
-    top: 0;
-    left: 0;
-    right: 0;
+    border-bottom: 1px solid black;
 }
 
 .menu {
@@ -59,35 +62,36 @@ body {
     flex-grow: .2;
 }
 
-/*CUERPO*/
-hr {
-    margin-top: 6rem;
+.navbar ul li a:hover {
+    color: #FF4500;
 }
+
+/*CUERPO*/
 
 .title {
     padding: 2rem;
     font-size: 32px;
     font-weight: bold;
+    margin-top: 5rem;
 }
 
 .container-prendas {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    max-width: 1000px;
+    max-width: 1050px;
     margin: 0 auto;
-    gap: 1rem;  
 }
 
 .item {
-    display: flex;
-    flex-direction: column;
+    padding: 1rem;
     align-items: center;
     text-align: center;
-    position: relative;
+    width: 100%;
 }
 
 .item img {
     max-width: 100%;
+    width: 100%;
     border-radius: 1rem;
 }
 
@@ -96,13 +100,19 @@ hr {
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    width: 90%;
+    width: 100%;
     max-width: 100%;
     font-size: 14px;
 }
 
 .precios {
     font-weight: bold;
+}
+
+.item:hover {
+    box-shadow: 0 0 10px grey; 
+    background-color: #ffffff;
+    border-radius: .5rem;
 }
 
 /*FOOTER*/
@@ -115,10 +125,12 @@ footer {
     color: #ffffff;
     font-size: 16px;
 }
+
 .footer-item {
     display: flex;
     align-items: center;
 }
+
 .icono {
     height: 3rem;
     width: 3rem;
@@ -130,8 +142,12 @@ footer {
     background-color: #ffffff;
 }
 
-/* PANTALLAS MÁX 920PX */
+.footer-item p:hover {
+    color: #FF4500;
 
+}
+
+/* PANTALLAS MÁX 920PX */
 @media (max-width: 920px) {
 
     *{
@@ -168,16 +184,12 @@ footer {
     }
 
     /*CUERPO*/
-    hr {
+    .title {
         margin: 0;
     }
     .container-prendas {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
-    }
-
-    .item .info-producto {
-        width: 50%;
     }
 
     /*FOOTER*/
